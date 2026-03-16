@@ -101,7 +101,7 @@ const App: React.FC = () => {
   const handleAdminChat = () => {
     // Membuka WhatsApp Admin Registrasi
     const message = "Halo Admin Registrasi Gucci Elite, saya ingin bertanya mengenai program kemitraan.";
-    window.open(`https://wa.me/6281227905517?text=${encodeURIComponent(message)}`, "_blank");
+    window.open(`https://wa.me/6281263475400?text=${encodeURIComponent(message)}`, "_blank");
   };
 
   const handleFormSubmit = (e: React.FormEvent) => {
@@ -110,7 +110,7 @@ const App: React.FC = () => {
 
     const message = `Nama: ${formData.name}\nUmur: ${formData.age}\nNomor Telepon: ${formData.phone}\nTarget: ${formData.tier}\n\nSaya ingin menjadi partner GUCCI, tolong bantu daftarkan akun kerja saya.`;
     const encodedMessage = encodeURIComponent(message);
-    const whatsappUrl = `https://wa.me/6281227905517?text=${encodedMessage}`;
+    const whatsappUrl = `https://wa.me/6281263475400?text=${encodedMessage}`;
 
     // Simulasi pengiriman data ke server sebelum redirect
     setTimeout(() => {
@@ -130,19 +130,27 @@ const App: React.FC = () => {
   const faqs: FAQItem[] = [
     {
       question: "Apa itu Gucci Elite Partnership?",
-      answer: "Ini adalah program kemitraan profesional yang dikelola oleh PT Graha Citra Prima sebagai penanggung jawab resmi mitra bisnis Gucci di Indonesia. Kami mengadopsi sistem manajemen akun mewah untuk membantu individu menghasilkan pendapatan harian."
+      answer: "Ini adalah program kemitraan profesional eksklusif yang dikelola oleh PT Graha Citra Prima. Kami bertindak sebagai jembatan resmi bagi individu yang ingin terlibat dalam ekosistem bisnis barang mewah. Program ini mengadopsi sistem manajemen akun modern yang memungkinkan mitra untuk berpartisipasi dalam distribusi dan promosi produk dengan imbalan komisi yang sangat kompetitif."
     },
     {
-      question: "Berapa modal minimal pendaftaran?",
-      answer: "Pendaftaran hanya membutuhkan modal minimal Rp 100.000. Modal ini digunakan untuk aktivasi Akun Kerja Anda yang akan dipandu langsung oleh Admin Registrasi kami."
+      question: "Bagaimana sistem keamanan modal saya?",
+      answer: "Keamanan Anda adalah prioritas utama kami. Seluruh modal yang Anda setorkan dikelola melalui sistem Escrow yang diawasi oleh PT Graha Citra Prima. Dana tersebut dialokasikan secara khusus untuk operasional Akun Kerja Anda dan tidak dapat diakses oleh pihak ketiga. Kami menjamin transparansi penuh melalui dashboard digital yang dapat Anda pantau 24/7."
     },
     {
-      question: "Apa itu Akun Kerja (Work Account)?",
-      answer: "Akun Kerja adalah platform dashboard khusus yang berfungsi seperti e-wallet. Di sini Anda dapat memantau saldo pendapatan, riwayat transaksi, dan melakukan penarikan komisi secara real-time."
+      question: "Mengapa menggunakan rekening pribadi untuk transaksi?",
+      answer: "Penggunaan rekening pribadi (bank lokal) bertujuan untuk memberikan fleksibilitas dan kecepatan dalam proses penarikan komisi (withdrawal). Dengan sistem ini, mitra dapat menerima profit mereka secara instan tanpa harus melalui birokrasi perbankan korporat yang lambat dan berbiaya tinggi. Seluruh transaksi tetap tercatat secara resmi dalam sistem audit internal kami."
     },
     {
-      question: "Apakah bisnis ini memiliki legalitas resmi?",
-      answer: "Ya, program ini berada di bawah naungan PT Graha Citra Prima dan didukung oleh berbagai lembaga resmi di Indonesia untuk menjamin keamanan dan transparansi bagi seluruh mitra bisnis."
+      question: "Apa peran Mentor atau Advisor dalam program ini?",
+      answer: "Setiap mitra akan mendapatkan bimbingan dari Mentor atau Admin Registrasi yang berpengalaman. Tugas mereka adalah memastikan Anda memahami cara kerja sistem, membantu optimasi Akun Kerja, dan memberikan strategi untuk memaksimalkan komisi harian Anda. Anda tidak akan berjalan sendirian; kami menyediakan dukungan penuh di setiap langkah."
+    },
+    {
+      question: "Berapa lama proses evaluasi berlangsung?",
+      answer: "Proses evaluasi biasanya berlangsung dalam 1-3 hari kerja, tergantung pada kelengkapan data dan kecepatan aktivasi modal. Setelah tahap verifikasi selesai, Akun Kerja Anda akan segera diaktifkan, dan Anda dapat mulai menghasilkan komisi pada hari yang sama."
+    },
+    {
+      question: "Apakah ada biaya tersembunyi?",
+      answer: "Tidak ada biaya tersembunyi. Modal awal yang Anda setorkan (mulai dari Rp 100.000) adalah satu-satunya biaya aktivasi untuk membuka akses ke sistem Gucci Elite. Kami sangat menjunjung tinggi integritas dan transparansi dalam setiap aspek kemitraan."
     }
   ];
 
@@ -197,6 +205,7 @@ const App: React.FC = () => {
           <div className="hidden lg:flex gap-8 text-[10px] font-bold uppercase tracking-[0.2em] items-center">
             <button onClick={() => scrollToSection('about')} className="hover:text-[#d4af37] transition-all py-2 border-b-2 border-transparent hover:border-[#d4af37] cursor-pointer outline-none">Tentang Bisnis</button>
             <button onClick={() => scrollToSection('evaluation')} className="hover:text-[#d4af37] transition-all py-2 border-b-2 border-transparent hover:border-[#d4af37] cursor-pointer outline-none">Evaluasi</button>
+            <button onClick={() => scrollToSection('mentor')} className="hover:text-[#d4af37] transition-all py-2 border-b-2 border-transparent hover:border-[#d4af37] cursor-pointer outline-none">Mentor</button>
             <button onClick={() => scrollToSection('commission')} className="hover:text-[#d4af37] transition-all py-2 border-b-2 border-transparent hover:border-[#d4af37] cursor-pointer outline-none">Komisi</button>
             <button onClick={() => scrollToSection('security')} className="hover:text-[#d4af37] transition-all py-2 border-b-2 border-transparent hover:border-[#d4af37] cursor-pointer outline-none">Keamanan</button>
             <button onClick={() => scrollToSection('gallery')} className="hover:text-[#d4af37] transition-all py-2 border-b-2 border-transparent hover:border-[#d4af37] cursor-pointer outline-none">Gallery</button>
@@ -209,7 +218,42 @@ const App: React.FC = () => {
               Join Program
             </button>
           </div>
+
+          {/* Mobile Menu Button */}
+          <button 
+            className="lg:hidden text-black p-2 outline-none"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
         </div>
+
+        {/* Mobile Menu Overlay */}
+        <AnimatePresence>
+          {isMobileMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              className="lg:hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-2xl border-b border-black/5 shadow-2xl py-10 px-6 flex flex-col gap-6 text-center"
+            >
+              <button onClick={() => scrollToSection('about')} className="text-sm font-black uppercase tracking-widest hover:text-[#d4af37]">Tentang Bisnis</button>
+              <button onClick={() => scrollToSection('evaluation')} className="text-sm font-black uppercase tracking-widest hover:text-[#d4af37]">Evaluasi</button>
+              <button onClick={() => scrollToSection('mentor')} className="text-sm font-black uppercase tracking-widest hover:text-[#d4af37]">Mentor</button>
+              <button onClick={() => scrollToSection('commission')} className="text-sm font-black uppercase tracking-widest hover:text-[#d4af37]">Komisi</button>
+              <button onClick={() => scrollToSection('security')} className="text-sm font-black uppercase tracking-widest hover:text-[#d4af37]">Keamanan</button>
+              <button onClick={() => scrollToSection('gallery')} className="text-sm font-black uppercase tracking-widest hover:text-[#d4af37]">Gallery</button>
+              <button onClick={() => scrollToSection('faq')} className="text-sm font-black uppercase tracking-widest hover:text-[#d4af37]">FAQ</button>
+              <button onClick={() => scrollToSection('location')} className="text-sm font-black uppercase tracking-widest hover:text-[#d4af37]">Lokasi</button>
+              <button 
+                onClick={navigateToRegistration}
+                className="bg-gold-gradient text-black py-4 rounded-full font-black text-sm uppercase tracking-widest shadow-lg"
+              >
+                Join Program
+              </button>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </nav>
 
       <AnimatePresence mode="wait">
@@ -278,7 +322,7 @@ const App: React.FC = () => {
                     <div 
                       onClick={() => setActiveFeature({
                         title: "Admin Registrasi",
-                        desc: "Admin Registrasi adalah pendamping resmi yang akan membimbing Anda mulai dari proses pendaftaran hingga aktivasi Akun Kerja. Mereka memastikan setiap langkah dilakukan dengan benar sesuai prosedur PT Graha Citra Prima untuk menjamin keamanan data and dana Anda."
+                        desc: "Admin Registrasi adalah pendamping resmi yang akan membimbing Anda mulai dari proses pendaftaran hingga aktivasi Akun Kerja. Mereka memastikan setiap langkah dilakukan dengan benar sesuai prosedur PT Graha Citra Prima untuk menjamin keamanan data dan dana Anda."
                       })}
                       className="luxury-card p-8 rounded-3xl group cursor-pointer hover:border-[#d4af37]/50 transition-all hover:bg-black/5"
                     >
@@ -290,13 +334,13 @@ const App: React.FC = () => {
                     <div 
                       onClick={() => setActiveFeature({
                         title: "E-Wallet System (Akun Kerja)",
-                        desc: "Akun Kerja Anda berfungsi sebagai dompet digital (e-wallet) terpusat. Di sini, Anda dapat melihat arus kas masuk dari komisi harian, memantau pertumbuhan saldo secara real-time, and melakukan penarikan dana (withdraw) langsung ke rekening bank lokal pilihan Anda di Indonesia."
+                        desc: "Akun Kerja Anda berfungsi sebagai dompet digital (e-wallet) terpusat. Di sini, Anda dapat melihat arus kas masuk dari komisi harian, memantau pertumbuhan saldo secara real-time, dan melakukan penarikan dana (withdraw) langsung ke rekening bank lokal pilihan Anda di Indonesia."
                       })}
                       className="luxury-card p-8 rounded-3xl group cursor-pointer hover:border-[#d4af37]/50 transition-all hover:bg-black/5"
                     >
                       <div className="text-[#d4af37] mb-4 group-hover:scale-110 transition-transform"><TrendingUp size={32} /></div>
                       <h4 className="text-black font-bold mb-2">E-Wallet System</h4>
-                      <p className="text-sm">Pantau saldo pendapatan, riwayat komisi, and status penarikan dana Anda secara real-time melalui dashboard eksklusif.</p>
+                      <p className="text-sm">Pantau saldo pendapatan, riwayat komisi, dan status penarikan dana Anda secara real-time melalui dashboard eksklusif.</p>
                       <div className="mt-4 text-[10px] text-[#d4af37] font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">Klik untuk detail →</div>
                     </div>
                   </div>
@@ -332,7 +376,7 @@ const App: React.FC = () => {
                   <img src="https://images.adsttc.com/media/images/5372/d042/c07a/80ac/fd00/0062/medium_jpg/1_est_giorno.jpg?1400033323" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt="Interior" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-6 sm:p-10">
                     <h4 className="text-white text-xl sm:text-2xl font-serif font-bold mb-2">Luxury Environment</h4>
-                    <p className="text-gray-300 text-xs sm:text-sm">Ekosistem kerja yang dirancang untuk kenyamanan and prestise.</p>
+                    <p className="text-gray-300 text-xs sm:text-sm">Ekosistem kerja yang dirancang untuk kenyamanan dan prestise.</p>
                   </div>
                 </div>
                 <div className="group relative overflow-hidden rounded-[2rem] sm:rounded-[2.5rem] h-[350px] sm:h-[450px] md:h-[500px] shadow-2xl">
@@ -352,9 +396,9 @@ const App: React.FC = () => {
               <h2 className="text-3xl sm:text-4xl md:text-6xl font-serif font-bold mb-12 sm:mb-20 italic">Program Evaluasi Resmi</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-12">
                   { [
-                    { step: "01", title: "Aktivasi Modal", desc: "Aktivasi modal minimal Rp 100.000 untuk pembukaan slot Akun Kerja and biaya sistem operasional Anda.", detail: "Modal minimal Rp 100.000 digunakan untuk mengaktifkan lisensi kemitraan and membuka akses ke sistem operasional Gucci Elite. Dana ini sepenuhnya menjadi saldo awal atau biaya aktivasi sistem yang dikelola secara transparan." },
-                    { step: "02", title: "Pembuatan Akun", desc: "Proses pembuatan Akun Kerja (E-Wallet) yang dipandu langsung oleh Admin Registrasi resmi.", detail: "Proses ini melibatkan verifikasi identitas and pembuatan kredensial login untuk Akun Kerja Anda. Admin Registrasi akan memberikan panduan teknis melalui WhatsApp untuk memastikan akun Anda siap digunakan dalam hitungan menit." },
-                    { step: "03", title: "Monitoring Hasil", desc: "Pantau saldo pendapatan harian Anda and lakukan penarikan komisi langsung ke rekening pribadi.", detail: "Setelah akun aktif, Anda dapat mulai menjalankan tugas kemitraan. Setiap hasil kerja akan langsung dikreditkan ke saldo Akun Kerja Anda. Transparansi adalah prioritas kami, sehingga Anda memiliki kendali penuh atas setiap rupiah yang Anda hasilkan." }
+                    { step: "01", title: "Inkubasi & Aktivasi", desc: "Tahap awal pembukaan slot Akun Kerja dan sinkronisasi sistem operasional dengan modal minimal.", detail: "Tahap ini adalah langkah krusial di mana Anda melakukan aktivasi modal minimal Rp 100.000. Dana ini digunakan untuk mengaktifkan lisensi kemitraan digital Anda dan membuka akses ke dashboard operasional Gucci Elite. Admin kami akan memastikan akun Anda terkonfigurasi dengan benar untuk menerima tugas pertama." },
+                    { step: "02", title: "Uji Kompetensi Digital", desc: "Proses edukasi dan simulasi pengelolaan transaksi yang dipandu langsung oleh Mentor berpengalaman.", detail: "Anda akan diberikan serangkaian tugas simulasi untuk memahami mekanisme pasar dan cara kerja sistem e-wallet kami. Mentor akan memberikan feedback real-time untuk memastikan Anda dapat mengelola transaksi dengan akurasi 100%. Tahap ini menjamin kualitas operasional setiap mitra." },
+                    { step: "03", title: "Verifikasi Kelayakan", desc: "Tahap akhir verifikasi performa sebelum aktivasi penuh status kemitraan Senior Partner.", detail: "Setelah berhasil melewati uji kompetensi, tim audit kami akan melakukan verifikasi akhir terhadap performa akun Anda. Jika dinyatakan layak, Anda akan mendapatkan akses penuh ke fitur penarikan komisi instan dan berhak atas bagi hasil hingga 50% sesuai dengan tier yang dipilih." }
                   ].map((item, idx) => (
                     <div 
                       key={idx} 
@@ -372,11 +416,63 @@ const App: React.FC = () => {
             </div>
           </section>
 
+          {/* Mentor & Community Section */}
+          <section id="mentor" className="py-20 sm:py-32 px-6 bg-white scroll-mt-24">
+            <div className="max-w-7xl mx-auto">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                <div className="order-2 lg:order-1">
+                  <div className="relative">
+                    <img 
+                      src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=2071&auto=format&fit=crop" 
+                      className="rounded-[3rem] shadow-2xl grayscale hover:grayscale-0 transition-all duration-700" 
+                      alt="Mentor Support" 
+                    />
+                    <div className="absolute -top-10 -right-10 bg-white p-8 rounded-3xl shadow-2xl border border-[#d4af37]/20 max-w-[250px]">
+                      <div className="flex items-center gap-4 mb-4">
+                        <div className="w-12 h-12 bg-gold-gradient rounded-full flex items-center justify-center text-black font-bold">1:1</div>
+                        <div className="text-xs font-black uppercase tracking-widest">Personal Guidance</div>
+                      </div>
+                      <p className="text-[10px] text-gray-500 italic">"Kami memastikan setiap mitra memiliki pemahaman mendalam sebelum memulai operasional penuh."</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="order-1 lg:order-2 space-y-10">
+                  <h2 className="text-4xl md:text-6xl font-serif font-bold leading-none italic uppercase tracking-tighter">Mentor & <br/> <span className="gold-gradient">Trusted Community</span></h2>
+                  <p className="text-gray-600 text-xl leading-relaxed">
+                    Anda tidak akan pernah berjalan sendirian. Program Gucci Elite menyediakan akses eksklusif ke jaringan mentor profesional dan grup komunitas yang solid.
+                  </p>
+                  <div className="space-y-6">
+                    <div className="flex gap-6 items-start">
+                      <div className="bg-gold-gradient/10 p-4 rounded-2xl text-[#d4af37]"><Users size={24} /></div>
+                      <div>
+                        <h4 className="text-xl font-bold mb-2">Grup Komunitas Eksklusif</h4>
+                        <p className="text-gray-500">Bergabunglah dengan ratusan mitra lainnya dalam grup diskusi tertutup untuk berbagi strategi dan bukti profit harian.</p>
+                      </div>
+                    </div>
+                    <div className="flex gap-6 items-start">
+                      <div className="bg-gold-gradient/10 p-4 rounded-2xl text-[#d4af37]"><Info size={24} /></div>
+                      <div>
+                        <h4 className="text-xl font-bold mb-2">Bimbingan Intensif 24/7</h4>
+                        <p className="text-gray-500">Akses langsung ke Admin Registrasi dan Advisor untuk konsultasi teknis maupun strategis kapan saja Anda butuhkan.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <button 
+                    onClick={handleAdminChat}
+                    className="bg-gold-gradient text-black px-10 py-4 rounded-full font-black text-sm uppercase tracking-widest hover:scale-105 transition-transform shadow-xl"
+                  >
+                    Hubungi Mentor Sekarang
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+
           {/* Commission Section */}
           <section id="commission" className="py-20 sm:py-32 px-6 scroll-mt-24">
             <div className="max-w-7xl mx-auto text-center">
               <h2 className="text-3xl sm:text-4xl md:text-6xl font-serif font-bold mb-6 uppercase tracking-tight">Struktur Komisi Kemitraan</h2>
-              <p className="text-gray-600 text-base sm:text-xl mb-12 sm:mb-20 max-w-2xl mx-auto">Sistem pembagian profit yang adil and transparan bagi seluruh level mitra.</p>
+              <p className="text-gray-600 text-base sm:text-xl mb-12 sm:mb-20 max-w-2xl mx-auto">Sistem pembagian profit yang adil dan transparan bagi seluruh level mitra.</p>
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
                 {commissionTiers.map((tier, idx) => (
@@ -418,11 +514,11 @@ const App: React.FC = () => {
                       </li>
                       <li className="flex gap-4 items-start">
                         <span className="text-[#d4af37] font-bold">●</span>
-                        <span><strong>Dukungan Lembaga:</strong> Operasional kami didukung oleh standar keamanan data nasional and pengawasan lembaga terkait.</span>
+                        <span><strong>Dukungan Lembaga:</strong> Operasional kami didukung oleh standar keamanan data nasional dan pengawasan lembaga terkait.</span>
                       </li>
                       <li className="flex gap-4 items-start">
                         <span className="text-[#d4af37] font-bold">●</span>
-                        <span><strong>Transparansi Dana:</strong> Sistem Akun Kerja memastikan setiap rupiah modal and pendapatan Anda tercatat secara transparan.</span>
+                        <span><strong>Transparansi Dana:</strong> Sistem Akun Kerja memastikan setiap rupiah modal dan pendapatan Anda tercatat secara transparan.</span>
                       </li>
                     </ul>
                   </div>
@@ -430,13 +526,13 @@ const App: React.FC = () => {
                 <div className="space-y-10">
                   <h2 className="text-4xl md:text-6xl font-serif font-bold leading-none italic uppercase tracking-tighter">Kemitraan <br/> <span className="gold-gradient">Resmi Indonesia</span></h2>
                   <p className="text-gray-600 text-xl leading-relaxed">
-                    Kami menjamin keamanan investasi Anda melalui sistem <strong>Escrow Terpadu</strong> and pengawasan langsung oleh <strong>PT Graha Citra Prima</strong>. Setiap mitra memiliki hak penuh atas saldo di Akun Kerja mereka.
+                    Kami menjamin keamanan investasi Anda melalui sistem <strong>Escrow Terpadu</strong> dan pengawasan langsung oleh <strong>PT Graha Citra Prima</strong>. Penggunaan rekening pribadi mitra untuk transaksi harian adalah strategi efisiensi untuk menghindari biaya transfer korporat yang tinggi dan memastikan komisi cair secara instan. Setiap mitra memiliki hak penuh atas saldo di Akun Kerja mereka yang dapat ditarik kapan saja.
                   </p>
                   <div className="flex flex-wrap gap-6">
                     <div 
                       onClick={() => setActiveFeature({
                         title: "PT Graha Citra Prima",
-                        desc: "Sebagai penanggung jawab tunggal mitra bisnis Gucci di Indonesia, PT Graha Citra Prima menjamin seluruh operasional berjalan sesuai dengan hukum perdagangan and regulasi digital yang berlaku di Republik Indonesia. Kami memiliki izin resmi untuk mengelola jaringan kemitraan ini secara nasional."
+                        desc: "Sebagai penanggung jawab tunggal mitra bisnis Gucci di Indonesia, PT Graha Citra Prima menjamin seluruh operasional berjalan sesuai dengan hukum perdagangan dan regulasi digital yang berlaku di Republik Indonesia. Kami memiliki izin resmi untuk mengelola jaringan kemitraan ini secara nasional."
                       })}
                       className="bg-black/5 p-6 rounded-2xl border border-black/10 flex-1 min-w-[120px] text-center cursor-pointer hover:border-[#d4af37] transition-all group"
                     >
@@ -446,7 +542,7 @@ const App: React.FC = () => {
                     <div 
                       onClick={() => setActiveFeature({
                         title: "Sistem Terdaftar KOMINFO",
-                        desc: "Sistem digital kami telah melalui proses standarisasi and pendaftaran pada lembaga terkait (PSE KOMINFO) untuk memastikan keamanan siber and perlindungan data pribadi seluruh mitra kami di Indonesia. Kami berkomitmen pada transparansi and kepatuhan regulasi."
+                        desc: "Sistem digital kami telah melalui proses standarisasi dan pendaftaran pada lembaga terkait (PSE KOMINFO) untuk memastikan keamanan siber dan perlindungan data pribadi seluruh mitra kami di Indonesia. Kami berkomitmen pada transparansi dan kepatuhan regulasi."
                       })}
                       className="bg-black/5 p-6 rounded-2xl border border-black/10 flex-1 min-w-[120px] text-center cursor-pointer hover:border-[#d4af37] transition-all group"
                     >
@@ -456,7 +552,7 @@ const App: React.FC = () => {
                     <div 
                       onClick={() => setActiveFeature({
                         title: "Pengawasan Lembaga Keuangan",
-                        desc: "Seluruh lalu lintas dana pada sistem Akun Kerja (E-Wallet) dipantau untuk memastikan kepatuhan terhadap regulasi anti-pencucian uang and perlindungan konsumen digital di Indonesia, memberikan rasa aman ekstra bagi setiap mitra."
+                        desc: "Seluruh lalu lintas dana pada sistem Akun Kerja (E-Wallet) dipantau untuk memastikan kepatuhan terhadap regulasi anti-pencucian uang dan perlindungan konsumen digital di Indonesia, memberikan rasa aman ekstra bagi setiap mitra."
                       })}
                       className="bg-black/5 p-6 rounded-2xl border border-black/10 flex-1 min-w-[120px] text-center cursor-pointer hover:border-[#d4af37] transition-all group"
                     >
@@ -477,7 +573,7 @@ const App: React.FC = () => {
                   Lifestyle <br/> <span className="text-white">Heritage</span>
                 </h2>
                 <p className="text-gray-400 text-lg sm:text-xl max-w-2xl mx-auto">
-                  Visualisasi eksklusivitas and kemewahan yang menjadi standar dalam ekosistem Gucci Elite.
+                  Visualisasi eksklusivitas dan kemewahan yang menjadi standar dalam ekosistem Gucci Elite.
                 </p>
               </div>
 
@@ -766,7 +862,7 @@ const App: React.FC = () => {
           <div className="col-span-1 md:col-span-2">
             <button onClick={navigateToHome} className="text-4xl font-serif font-bold gold-gradient tracking-widest uppercase mb-8 hover:scale-105 transition-transform outline-none cursor-pointer">Gucci Elite</button>
             <p className="text-gray-600 mt-6 max-w-sm mx-auto md:mx-0 leading-relaxed text-lg italic">
-              "Pemberdayaan mitra melalui manajemen aset digital yang cerdas and transparan."
+              "Pemberdayaan mitra melalui manajemen aset digital yang cerdas dan transparan."
             </p>
             <div className="mt-10 flex justify-center md:justify-start gap-6">
               <div className="w-12 h-12 rounded-full border border-black/10 flex items-center justify-center hover:border-[#d4af37] transition-colors cursor-pointer text-black"><Crown size={20} /></div>
@@ -779,6 +875,7 @@ const App: React.FC = () => {
             <ul className="space-y-6 text-gray-600 text-sm font-bold uppercase tracking-widest">
               <li><button onClick={() => scrollToSection('about')} className="hover:text-[#d4af37] transition-colors cursor-pointer outline-none">Tentang Bisnis</button></li>
               <li><button onClick={() => scrollToSection('evaluation')} className="hover:text-[#d4af37] transition-colors cursor-pointer outline-none">Program Evaluasi</button></li>
+              <li><button onClick={() => scrollToSection('mentor')} className="hover:text-[#d4af37] transition-colors cursor-pointer outline-none">Program Mentor</button></li>
               <li><button onClick={navigateToRegistration} className="hover:text-[#d4af37] transition-colors cursor-pointer outline-none">Join Mitra Baru</button></li>
               <li><button onClick={handleAdminChat} className="hover:text-[#d4af37] transition-colors cursor-pointer outline-none">Pusat Admin</button></li>
             </ul>
